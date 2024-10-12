@@ -1,0 +1,204 @@
+/* App Container */
+.App {
+  text-align: center;
+  padding: 20px;
+  background-color: #e6f9e9; /* Light green background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif; /* Use the Quicksand font */
+  color: #333; /* Dark text for readability */
+}
+
+/* Header Styling */
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #6a0dad; /* Purple color for the header text */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+form:hover {
+  transform: translateY(-10px);
+}
+
+/* Input fields */
+input[type="text"],
+input[type="number"],
+select {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1.1em;
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  transition: border-color 0.3s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.9); /* Light input background */
+  color: #333; /* Dark input text */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #6a0dad; /* Purple border on focus */
+}
+
+/* Submit Button */
+button {
+  background-color: #6a0dad; /* Purple button background */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #8a2be2; /* Lighter purple hover effect */
+}
+
+/* Player List Styling */
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  width: 100%;
+}
+
+ul li {
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.2em;
+  text-align: left;
+}
+
+ul li span {
+  font-weight: bold;
+  color: #6a0dad; /* Purple text for important info */
+}
+
+/* Combination Card Styling */
+.combination-card {
+  background-color: #f8f9fa; /* Light background for the card */
+  border: 2px solid #6a0dad; /* Purple border */
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 20px;
+  margin: 15px 0;
+  width: 100%;
+  max-width: 600px;
+  text-align: center; /* Center the text */
+  font-family: 'Quicksand', sans-serif; /* Ensure consistency in font */
+  transition: transform 0.3s ease-in-out; /* Smooth hover animation */
+}
+
+/* Hover effect to make the card more interactive */
+.combination-card:hover {
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Styling for the combination details */
+.combination-card p {
+  margin: 10px 0;
+  font-size: 1.2em; /* Slightly larger font for better readability */
+}
+
+.combination-card .combination-title {
+  font-weight: bold;
+  font-size: 1.4em; /* Make the combination title stand out */
+  color: #6a0dad; /* Purple color for the title */
+}
+
+.combination-card .hit-rate,
+.combination-card .payout {
+  font-size: 1.1em;
+  color: #28a745; /* Green for hit rate and payout */
+}
+
+.combination-card .payout {
+  font-weight: bold; /* Bold for payout */
+}
+
+/* Loader Styling */
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #6a0dad;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Chart Container */
+.chart-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+
+  form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  ul li {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  button {
+    font-size: 1em;
+  }
+
+  .combination-card {
+    padding: 15px;
+    font-size: 1em;
+  }
+
+  .combination-card .combination-title {
+    font-size: 1.2em;
+  }
+}
